@@ -42,7 +42,7 @@ switch (operator) {
   case 4:
     console.log("\nVous avez donc choisit la Division.");
     if (secondNumber === 0) {
-      console.error("Nombre indivisible par O");
+      console.error("\nNombre indivisible par O");
       process.exit(1);
     }
     console.log(
