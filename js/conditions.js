@@ -11,13 +11,24 @@ console.log(`\nBonjour ${name} !`);
 console.log(
   "\nChoisissez un opérateur :\n1. Addition\n2. Soustraction\n3. Multiplication\n4. Division\n"
 );
+let operateur = 0;
 
-const operator = Number(await prompt("\nEntrez l'opérateur : "));
+while (operateur === 0) {
+  const operator = Number(await prompt("\nEntrez l'opérateur : "));
+
+  if (operator !== 1 && operator !== 2 && operator !== 3 && operator !== 4) {
+    console.log(
+      "\nErreur : l'opérateur n'est pas entre 1, 2, 3 ou 4 ! Réessayez."
+    );
+  } else {
+    operateur = operator;
+  }
+}
 
 const firstNumber = Number(await prompt("\nEntrer le premier Nombre : "));
 const secondNumber = Number(await prompt("\nEntrer le deuxieme Nombre : "));
 
-switch (operator) {
+switch (operateur) {
   case 1:
     console.log("\nVous avez donc choisit l'Addition.");
     console.log(
@@ -56,4 +67,4 @@ switch (operator) {
     break;
 }
 
-console.log(`\n\n ''' MERCI POUR VOTRE CONFIANCE ${name.toUpperCase()}'''`);
+console.log(`\n\n ''' MERCI POUR VOTRE CONFIANCE ${name.toUpperCase()} '''`);
