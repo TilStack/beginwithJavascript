@@ -4,7 +4,7 @@ console.log(
   "''' \nICI NOUS ALLONS FAIRE UN PROGRAMME COMPLET SELON MON GOUT '''"
 );
 
-const name = await prompt("Quel est votre nom ?");
+const name = await prompt("\nQuel est votre nom ? ".toUpperCase());
 
 console.log(`\nBonjour ${name} !`);
 
@@ -31,6 +31,7 @@ const secondNumber = Number(await prompt("\nEntrer le deuxieme Nombre : "));
 switch (operateur) {
   case 1:
     console.log("\nVous avez donc choisit l'Addition.");
+
     console.log(
       "\nLe resultat de l'Addition est :",
       firstNumber + secondNumber
@@ -38,6 +39,7 @@ switch (operateur) {
     break;
   case 2:
     console.log("\nVous avez donc choisit la Soustraction.");
+
     console.log(
       "\nLe resultat de la Soustraction est :",
       firstNumber - secondNumber
@@ -45,6 +47,7 @@ switch (operateur) {
     break;
   case 3:
     console.log("\nVous avez donc choisit la Multiplication.");
+
     console.log(
       "\nLe resultat de la Multiplication est :",
       firstNumber * secondNumber
@@ -52,6 +55,7 @@ switch (operateur) {
     break;
   case 4:
     console.log("\nVous avez donc choisit la Division.");
+
     if (secondNumber === 0) {
       console.error("\nNombre indivisible par O");
       process.exit(1);
