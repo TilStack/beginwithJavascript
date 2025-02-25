@@ -33,3 +33,5 @@ const isNameLengthMoreThan4 = names.length > 4; // false
 //                    👇 true           👇 false
 const isOneTrue = isNameStartWithJ || isNameLengthMoreThan4;
 
+
+
